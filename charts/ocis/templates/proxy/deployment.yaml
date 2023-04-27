@@ -62,6 +62,9 @@ spec:
 
             - name: PROXY_OIDC_SKIP_CLIENT_ID_CHECK
               value: "true"
+
+            - name: PROXY_OIDC_ACCESS_TOKEN_VERIFY_METHOD
+              value: {{ .Values.features.externalUserManagement.oidc.accessTokenVerifyMethod | quote }}
             {{- end }}
 
             - name: PROXY_TLS
